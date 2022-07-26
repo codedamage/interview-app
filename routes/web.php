@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DropzoneController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\ImportExportController;
 use App\Http\Controllers\QuestionController;
