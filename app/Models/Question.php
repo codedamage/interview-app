@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Question extends Model
 {
     use HasFactory;
-    protected array $fillable = [
+    protected $fillable = [
         'question', 'answer', 'level', 'tech_id'
     ];
 }
