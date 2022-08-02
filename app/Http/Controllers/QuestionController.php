@@ -20,9 +20,9 @@ class QuestionController extends Controller
      */
     public function index(): Factory|View|Application
     {
-        $questions = DB::table('questions')->leftJoin('technologies', 'questions.tech_id', '=', 'technologies.id')->select('questions.*', 'technologies.name')->paginate(5);
+        $questions = DB::table('questions')->leftJoin('technologies', 'questions.tech_id', '=', 'technologies.id')->select('questions.*', 'technologies.name')->paginate(20);
         return view('questions.index',compact('questions'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 20);
     }
 
 
